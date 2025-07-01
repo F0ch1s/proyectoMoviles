@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <!-- Saludo -->
+    <TextView
+        android:id="@+id/textSaludo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hola, Usuario"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="100dp" />
+
+    <!-- Botón Crear equipo -->
+    <Button
+        android:id="@+id/btnCrearEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear proyecto"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#8E24AA"
+        android:layout_below="@id/textSaludo"
+        android:layout_marginTop="40dp" />
+
+    <!-- Botón Unirse a equipo -->
+    <Button
+        android:id="@+id/btnUnirseEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unirse a un proyecto"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B1FA2"
+        android:layout_below="@id/btnCrearEquipo"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_principal"
+        android:title="Menú Principal"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/nav_mis_equipos"
+        android:title="Mis Proyectos"
+        android:icon="@drawable/ic_group" />
+
+    <item
+        android:id="@+id/nav_ayuda"
+        android:title="Ayuda"
+        android:icon="@drawable/ic_help" />
+</menu>

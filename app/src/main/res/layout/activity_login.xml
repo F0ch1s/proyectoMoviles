@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="24dp"
+    tools:context=".ui.login.LoginActivity">
+
+    <!-- Guía central -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Logo más grande y centrado -->
+    <ImageView
+        android:id="@+id/logoUnitask"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_unitask"
+        app:layout_constraintBottom_toTopOf="@id/tvBienvenida"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Texto de bienvenida -->
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a UniTask"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/logoUnitask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Mensaje motivador -->
+    <TextView
+        android:id="@+id/tvMotivador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Organiza tus tareas, colabora y cumple tus metas"
+        android:textSize="16sp"
+        android:textColor="#DDDDDD"
+        android:textAlignment="center"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvBienvenida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Instrucción -->
+    <TextView
+        android:id="@+id/tvInstruccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicia tu sesión para usar la app"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMotivador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón de inicio con Google -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogleSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvInstruccion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campos ocultos -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_sign_in"
+        android:enabled="false"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleSignIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
